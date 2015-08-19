@@ -1,0 +1,86 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
+body {
+  color: green;
+  background-color: white;
+  font-family: 'Indie Flower', cursive;
+  /*font-family: 'Lato', sans-serif;*/
+  text-align: center
+
+}
+
+.container {
+  max-width: 560px;
+  margin: 0 auto; /* 0 vertically, center horizontally */
+  text-align: center;
+
+}
+
+.gallery {
+  margin-left: 0;
+/*  margin-right: 0;*/
+  padding-left: 0;
+ /* padding-right: 0;*/
+}
+
+
+.playergallery {
+  margin-left: 0;
+  padding-left: 0;
+  text-align: center
+}
+
+
+.playerbox{
+display: inline-block;
+  width: 50%;
+  overflow: hidden;
+  position: relative;
+  height: 70px;
+  width: 100px;
+   border: solid black 3px;
+   font-size: 50px;
+	border-radius: 25px;
+  text-align: center;
+  background: #ccc;
+}
+
+.playerbox:hover {
+	background-color: yellow ;
+}
+
+.activeplayer {
+	background-color: yellow ;
+}
+
+
+.box {
+display: inline-block;
+  width: 30%;
+  overflow: hidden;
+  position: relative;
+  height: 150px;
+  width: 150px;
+   border: solid black 3px;
+   font-size: 100px;
+   border-radius: 15px;
+   /*background-image: url("http://sandiegoca411.com/wp-content/uploads/2012/09/blankWhiteImage1.jpg")*/
+  
+}
+
+.box:hover{
+	background-color: gray ;
+
+}
+
+.boxtoggle{
+	background-color: red;
+}
+
+
+/*#FF4136*/
+
+
+
+/*	background-image: url("http://sandiegoca411.com/wp-content/uploads/2012/09/blankWhiteImage1.jpg") ;*/
