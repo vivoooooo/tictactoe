@@ -7,52 +7,75 @@
   <script src="js/jquery-1.11.3.js"></script>
   <script src="js/tic.js"></script>
 </head>
-</head>
-<body>
+</head>  
+<body>  
+<audio id="bearSong" >  
+    <source src="songs/bear.mp3" type="audio/mp4"> </audio>
+    <audio id="rainbowSong" > 
+    <source src="songs/rainbow.mp3" type="audio/mp4"> </audio>
+<div class='imagesrainbow1'> 
+<img src="images/rainbowcloud.jpg" alt="rainbowcloud">
+<img src="images/rainbowcloud.jpg" alt="rainbowcloud">
+</div>
+
+
 
 <div class="container">
-    <h1>TIC TAC TOE</h1>
+    <h1>BEAR VS BRITE</h1>
 
-
-<div class="play">
+  
+<div class="playAgain">
     <h2>PLAY AGAIN</h2>
 	</div>
-     
 
+  <div class="scoreKeep">
+    <h2>Carebear's Score : <span class="xScore">0</span>                         Rainbow Brite's Score : <span class="oScore">0</span></h2>   <!-- rainbow O  -->
+  </div>
+
+     <div class='whoWon'>
+     <h3></h3>
+     </div>
+    
      <div class="playergallery">
-    <div class= "playerbox" id= "playerO">O</div>    
-    <div class= "playerbox" id= "playerX">X</div>   
+    <div class= "playerbox" id= "playerO">RB</div>    
+    <div class= "playerbox" id= "playerX">CB</div>   
     </div>
+
 
 
     <div class="gallery">
             
 
-        <div class="box" id="box1">   <!-- firstrowleftbox  -->
-        </div>
+        <div class="box" id="box1"></div>   <!-- firstrowleftbox  -->
 
-         <div class="box" id="box2"> </div>  <!--  firstrowmiddlebox -->
+        <div class="box" id="box2"></div>  <!--  firstrowmiddlebox -->
 
-        <div class="box" id="box3"></div>     <!-- firstrowrightbox   -->
+        <div class="box" id="box3"></div>   <!-- firstrowrightbox   -->
         
-
-         <div class="box" id="box4"></div>   <!-- secondrowleftbox   -->
+        <div class="box" id="box4"></div>   <!-- secondrowleftbox   -->
 
         <div class="box" id="box5"></div>   <!-- secondrowmiddlebox   -->     
 
-        <div class="box" id="box6"> </div>  <!--  secondrowrightbox   -->    
+        <div class="box" id="box6"></div>  <!--  secondrowrightbox   -->    
 
-        <div class="box" id="box7">  </div> <!--  thirdrowleftbox   -->
+        <div class="box" id="box7"></div> <!--  thirdrowleftbox   -->
 
-         <div class="box" id="box8"> </div>   <!-- thirdrowmiddlebox -->
+         <div class="box" id="box8"></div>   <!-- thirdrowmiddlebox -->
 
-        <div class="box" id="box9"> </div> <!--  thirdrowrightbox  -->
+        <div class="box" id="box9"></div> <!--  thirdrowrightbox  -->
 
       </div>
       </div>
+
+      <div class='imagesrainbow2'> 
+<img src="images/rainbowcloud.jpg" alt="rainbowcloud">
+<img src="images/rainbowcloud.jpg" alt="rainbowcloud">
+
+</div>
+
+</div>
+
 	
 </body>
 </html>
 
-   <!--   <img src="http://freevectorfinder.com/images/thums/x_icon_clip_art_9385.jpg" id = "pic3"> -->
-     <!--         <img src="http://www.cse.dmu.ac.uk/~bb/CSCI2605/images/nought.png"> -->

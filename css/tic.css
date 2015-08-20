@@ -1,18 +1,19 @@
-@import url(//fonts.googleapis.com/css?family=Lato:400,700,700italic);
-@import url(//fonts.googleapis.com/css?family=Indie+Flower);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
 
 body {
-  color: green;
+  color:  #f44d54 ;   
   background-color: white;
   font-family: 'Indie Flower', cursive;
-  /*font-family: 'Lato', sans-serif;*/
-  text-align: center
+  text-align: center;
+  text-shadow: 2px 2px 8px #FF0000;
+
 
 }
 
 .container {
   max-width: 560px;
-  margin: 0 auto; /* 0 vertically, center horizontally */
+  margin: 0 auto; 
   text-align: center;
 
 }
@@ -28,7 +29,9 @@ body {
 .playergallery {
   margin-left: 0;
   padding-left: 0;
-  text-align: center
+  text-align: center;
+  color: #f44d54;
+  border: red 3px;
 }
 
 
@@ -39,19 +42,19 @@ display: inline-block;
   position: relative;
   height: 70px;
   width: 100px;
-   border: solid black 3px;
+   border: #f44d54 3px;
    font-size: 50px;
 	border-radius: 25px;
   text-align: center;
-  background: #ccc;
+  background: gray;
 }
 
 .playerbox:hover {
-	background-color: yellow ;
+	background-color: yellow;
 }
 
 .activeplayer {
-	background-color: yellow ;
+	background-color: yellow; 
 }
 
 
@@ -62,25 +65,44 @@ display: inline-block;
   position: relative;
   height: 150px;
   width: 150px;
-   border: solid black 3px;
+   border: solid #f44d54 3px;
    font-size: 100px;
-   border-radius: 15px;
-   /*background-image: url("http://sandiegoca411.com/wp-content/uploads/2012/09/blankWhiteImage1.jpg")*/
-  
+   border-radius: 40px;
+  box-shadow: 0 0 70px #FAAFBE;;
 }
 
 .box:hover{
-	background-color: gray ;
+	background-color: yellow;
 
 }
 
 .boxtoggle{
-	background-color: red;
+	background-color:  #FAAFBE;
 }
 
 
-/*#FF4136*/
+
+.imagesrainbow1  {
+      display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imagesrainbow2 {
+      display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#nyan {
+  display: block;
+  position:absolute;
+}
 
 
 
-/*	background-image: url("http://sandiegoca411.com/wp-content/uploads/2012/09/blankWhiteImage1.jpg") ;*/
+.carebear1 {
+  float: right;
+  position:absolute;
+}
+
