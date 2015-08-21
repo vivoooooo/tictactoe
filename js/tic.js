@@ -54,9 +54,22 @@ var game = {
 
         careBearWin: function() { 
 
-                          $('.imagesrainbow1').prepend($('<img>', { style: "position:absolute", id:"nyan",
+                          $('.imagesrainbow1').prepend($('<img>', { style: "position:absolute", id:"nyanOne",
                     src: "http://cdn2.business2community.com/wp-content/uploads/2014/08/tumblr_mjphnqLpNy1s5jjtzo1_4004.gif" 
                 }));
+
+                $('.imagesrainbow1').prepend($('<img>', { style: "position:absolute", id:"nyanTwo",
+                    src: "http://cdn2.business2community.com/wp-content/uploads/2014/08/tumblr_mjphnqLpNy1s5jjtzo1_4004.gif" 
+                }));
+
+                       $('.imagesrainbow2').prepend($('<img>', { style: "position:absolute", id:"nyanOne",
+                    src: "http://cdn2.business2community.com/wp-content/uploads/2014/08/tumblr_mjphnqLpNy1s5jjtzo1_4004.gif" 
+                }));
+
+                $('.imagesrainbow2').prepend($('<img>', { style: "position:absolute", id:"nyanTwo",
+                    src: "http://cdn2.business2community.com/wp-content/uploads/2014/08/tumblr_mjphnqLpNy1s5jjtzo1_4004.gif" 
+                }));
+
 
             $('.playergallery').prepend($('<img>', { style: "position:relative", id:"carebear1",
                     src: "http://i.imgur.com/EdKFg2d.gif" 
@@ -66,7 +79,19 @@ var game = {
 
 
      rainbowWin: function() {
-        $('.imagesrainbow1').prepend($('<img>', { style: "position:absolute", id:"nyan",
+        $('.imagesrainbow1').prepend($('<img>', { style: "position:absolute", id:"nyanOne",
+                    src: "http://cdn2.business2community.com/wp-content/uploads/2014/08/tumblr_mjphnqLpNy1s5jjtzo1_4004.gif" 
+                }));
+
+                $('.imagesrainbow1').prepend($('<img>', { style: "position:absolute", id:"nyanTwo",
+                    src: "http://cdn2.business2community.com/wp-content/uploads/2014/08/tumblr_mjphnqLpNy1s5jjtzo1_4004.gif" 
+                }));
+
+                       $('.imagesrainbow2').prepend($('<img>', { style: "position:absolute", id:"nyanOne",
+                    src: "http://cdn2.business2community.com/wp-content/uploads/2014/08/tumblr_mjphnqLpNy1s5jjtzo1_4004.gif" 
+                }));
+
+                $('.imagesrainbow2').prepend($('<img>', { style: "position:absolute", id:"nyanTwo",
                     src: "http://cdn2.business2community.com/wp-content/uploads/2014/08/tumblr_mjphnqLpNy1s5jjtzo1_4004.gif" 
                 }));
 

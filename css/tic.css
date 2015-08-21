@@ -7,8 +7,6 @@ body {
   font-family: 'Indie Flower', cursive;
   text-align: center;
   text-shadow: 2px 2px 8px #FF0000;
-
-
 }
 
 .container {
@@ -94,10 +92,17 @@ display: inline-block;
     margin-right: auto;
 }
 
-#nyan {
-  display: block;
-  position:absolute;
+#nyanOne {
+  display: line-block;
+  position: absolute;
 }
+
+#nyanTwo {
+  display: block;
+  position: absolute;
+  right: 40px;
+}
+
 
 
 
