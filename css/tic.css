@@ -92,16 +92,28 @@ display: inline-block;
     margin-right: auto;
 }
 
-#nyanOne {
+#nyanTopOne {
   display: line-block;
   position: absolute;
 }
 
-#nyanTwo {
+#nyanTopTwo {
   display: block;
   position: absolute;
   right: 40px;
 }
+
+#nyanBottomOne {
+  display: line-block;
+  position: absolute;
+}
+
+#nyanBottomTwo {
+  display: block;
+  position: absolute;
+  right: 40px;
+}
+
 
 
 

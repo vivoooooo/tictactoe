@@ -5,43 +5,46 @@ var clickCount = 0;
 var game = {
 
 
-        playMain: function() {
+        playMain: function() {                          //launches game when you reload the page 
 
 
-            $("#playerO").on("click", function() {
-                game.playNought()
+            $("#playerRainbow").on("click", function() {
+                game.playRainbow()
             });
 
-            $("#playerX").on("click", function() {
-                game.playCross()
+            $("#playerCarebear").on("click", function() {
+                game.playCarebear()
             });
 
         },
 
-        playAgainClick: function() {
+        playAgainClick: function() {                    //launches playAgain functino on clicking 'Play Again'
             $('.playAgain').unbind("click")
             $('.playAgain').on("click", function() {
                 game.playAgain()
             });
         },
 
-        playAgain: function() {
+        playAgain: function() {                        //This clears everything - the pictures from the boxes, the clickCount, music, winning pictures etc
             console.log('playAgain');
             clickCount = 0
             $(".box").html("");
             $(".whoWon").html("");
-            $('.playAgain').unbind("click",function(){game.playNought()});
-            $('.playAgain').unbind("click",function(){game.playCross()});
-            $("#playerO").on("click", function() {
-                game.playNought()
+            $('.playAgain').unbind("click",function(){game.playRainbow()});
+            $('.playAgain').unbind("click",function(){game.playCarebear()});
+            $("#playerRainbow").on("click", function() {
+                game.playRainbow()
             });
 
-            $("#playerX").on("click", function() {
-                game.playCross()
+            $("#playerCarebear").on("click", function() {
+                game.playCarebear()
             });
-            $("#playerX").removeClass("activeplayer");
-            $("#playerO").removeClass("activeplayer");
-            $('#nyan').remove()
+            $("#playerCarebear").removeClass("activeplayer");
+            $("#playerRainbow").removeClass("activeplayer");
+            $('#nyanTopOne').remove()
+            $('#nyanTopTwo').remove()
+            $('#nyanBottomOne').remove()
+            $('#nyanBottomTwo').remove()
             $('#carebear1').remove()
             $('#rainbow1').remove()
             bearSong.pause();
@@ -52,21 +55,21 @@ var game = {
 
         
 
-        careBearWin: function() { 
+        carebearWin: function() {       // Awesome stuff that happens once CARE BEAR WINS 
 
-                          $('.imagesrainbow1').prepend($('<img>', { style: "position:absolute", id:"nyanOne",
+                          $('.imagesrainbow1').prepend($('<img>', { style: "position:absolute", id:"nyanTopOne",
                     src: "http://cdn2.business2community.com/wp-content/uploads/2014/08/tumblr_mjphnqLpNy1s5jjtzo1_4004.gif" 
                 }));
 
-                $('.imagesrainbow1').prepend($('<img>', { style: "position:absolute", id:"nyanTwo",
+                $('.imagesrainbow1').prepend($('<img>', { style: "position:absolute", id:"nyanTopTwo",
                     src: "http://cdn2.business2community.com/wp-content/uploads/2014/08/tumblr_mjphnqLpNy1s5jjtzo1_4004.gif" 
                 }));
 
-                       $('.imagesrainbow2').prepend($('<img>', { style: "position:absolute", id:"nyanOne",
+                       $('.imagesrainbow2').prepend($('<img>', { style: "position:absolute", id:"nyanBottomOne",
                     src: "http://cdn2.business2community.com/wp-content/uploads/2014/08/tumblr_mjphnqLpNy1s5jjtzo1_4004.gif" 
                 }));
 
-                $('.imagesrainbow2').prepend($('<img>', { style: "position:absolute", id:"nyanTwo",
+                $('.imagesrainbow2').prepend($('<img>', { style: "position:absolute", id:"nyanBottomTwo",
                     src: "http://cdn2.business2community.com/wp-content/uploads/2014/08/tumblr_mjphnqLpNy1s5jjtzo1_4004.gif" 
                 }));
 
@@ -78,20 +81,20 @@ var game = {
         },
 
 
-     rainbowWin: function() {
-        $('.imagesrainbow1').prepend($('<img>', { style: "position:absolute", id:"nyanOne",
+     rainbowWin: function() {       // Awesome stuff that happens once RAINBOW BRITE WINS 
+        $('.imagesrainbow1').prepend($('<img>', { style: "position:absolute", id:"nyanTopOne",
                     src: "http://cdn2.business2community.com/wp-content/uploads/2014/08/tumblr_mjphnqLpNy1s5jjtzo1_4004.gif" 
                 }));
 
-                $('.imagesrainbow1').prepend($('<img>', { style: "position:absolute", id:"nyanTwo",
+                $('.imagesrainbow1').prepend($('<img>', { style: "position:absolute", id:"nyanTopTwo",
                     src: "http://cdn2.business2community.com/wp-content/uploads/2014/08/tumblr_mjphnqLpNy1s5jjtzo1_4004.gif" 
                 }));
 
-                       $('.imagesrainbow2').prepend($('<img>', { style: "position:absolute", id:"nyanOne",
+                $('.imagesrainbow2').prepend($('<img>', { style: "position:absolute", id:"nyanBottomOne",
                     src: "http://cdn2.business2community.com/wp-content/uploads/2014/08/tumblr_mjphnqLpNy1s5jjtzo1_4004.gif" 
                 }));
 
-                $('.imagesrainbow2').prepend($('<img>', { style: "position:absolute", id:"nyanTwo",
+                $('.imagesrainbow2').prepend($('<img>', { style: "position:absolute", id:"nyanBottomTwo",
                     src: "http://cdn2.business2community.com/wp-content/uploads/2014/08/tumblr_mjphnqLpNy1s5jjtzo1_4004.gif" 
                 }));
 
@@ -104,24 +107,24 @@ var game = {
         
 
 
-        playCross: function() {
+        playCarebear: function() {     //when CARE BEAR is chosen this function sets it up gameplay 
 
-            console.log('playCross');
+            console.log('playCarebear');
 
             clickCount = 0
-            $("#playerX").addClass("activeplayer");
+            $("#playerCarebear").addClass("activeplayer");
             $(".box").html("");
-            $(".box").on("click", game.boxTextChangeCross);
-            $("#playerX").off();
-            $("#playerO").off();
+            $(".box").on("click", game.boxTextChangeCarebear);
+            $("#playerCarebear").off();
+            $("#playerRainbow").off();
         },
 
 
-        boxTextChangeCross: function() {
-            console.log('boxTextChangeCross');
-            $("#playerX").addClass("activeplayer");
-            game.toggleCross();
-            game.CrossFirst($(this));
+        boxTextChangeCarebear: function() {   //when CARE BEAR is chosen this function starts the gameplay 
+            console.log('boxTextChangeCarebear');
+            $("#playerCarebear").addClass("activeplayer");
+            game.toggleCarebear();
+            game.CarebearFirst($(this));
             clickCount++;
             console.log(clickCount)
             $(this).off();
@@ -130,18 +133,18 @@ var game = {
 
         },
 
-        toggleCross: function() {
+        toggleCarebear: function() {         //when CARE BEAR plays first this toggles between the two players in the CB/RB player picks
             console.log('toggleClass');
             if (clickCount % 2 === 0) {
 
-                $("#playerX").removeClass("activeplayer");
-                $("#playerO").addClass("activeplayer");
+                $("#playerCarebear").removeClass("activeplayer");
+                $("#playerRainbow").addClass("activeplayer");
 
 
             } else {
 
-                $("#playerO").removeClass("activeplayer");
-                $("#playerX").addClass("activeplayer");
+                $("#playerRainbow").removeClass("activeplayer");
+                $("#playerCarebear").addClass("activeplayer");
 
             }
         },
@@ -149,7 +152,7 @@ var game = {
 
 
 
-        CrossFirst: function(element) {
+        CarebearFirst: function(element) {
             if (clickCount % 2 === 0) {
                 element.prepend($('<img>', {
                     src: 'images/carebear.jpg'
@@ -164,42 +167,42 @@ var game = {
 
 
 
-        playNought: function() {
-            console.log('playNought')
+        playRainbow: function() {
+            console.log('playRainbow')
             clickCount = 0
-            $("#playerO").addClass("activeplayer");
+            $("#playerRainbow").addClass("activeplayer");
             $(".box").html("");
-            $(".box").on("click", game.boxTextChangeNought);
-            $("#playerO").off()
-            $("#playerX").off()
+            $(".box").on("click", game.boxTextChangeRainbow);
+            $("#playerRainbow").off()
+            $("#playerCarebear").off()
         },
 
 
-        boxTextChangeNought: function() {
-        $("#playerO").addClass("activeplayer");
-        game.toggleNought();
-        game.NoughtFirst($(this)); // $(this) -> noughtFirst ($(this)) -> element (this).
+        boxTextChangeRainbow: function() {
+        $("#playerRainbow").addClass("activeplayer");
+        game.toggleRainbow();
+        game.RainbowFirst($(this)); // $(this) -> RainbowFirst ($(this)) -> element (this).
         clickCount++;
         $(this).off();
         game.winning();
     },
 
-    toggleNought: function() {
-        // console.log('toggleNought')
+    toggleRainbow: function() {
+        // console.log('toggleRainbow')
         if (clickCount % 2 === 0) {
-            $("#playerO").removeClass("activeplayer");
-            $("#playerX").addClass("activeplayer");
+            $("#playerRainbow").removeClass("activeplayer");
+            $("#playerCarebear").addClass("activeplayer");
         } else {
-            $("#playerX").removeClass("activeplayer");
-            $("#playerO").addClass("activeplayer");
+            $("#playerCarebear").removeClass("activeplayer");
+            $("#playerRainbow").addClass("activeplayer");
         }
     },
 
 
 
 
-    NoughtFirst: function(element) {
-        console.log('NoughtFirst')
+    RainbowFirst: function(element) {
+        console.log('RainbowFirst')
         if (clickCount % 2 === 0) {
             element.prepend($('<img>', {
                 src: 'images/rb7.gif'
@@ -214,16 +217,16 @@ var game = {
 
 
 
-    addScoreNought: function() {
-        var score = parseInt($(".oScore").text()) + 1;
-        $(".oScore").text(score);
+    addScoreRainbow: function() {
+        var score = parseInt($(".rainbowScore").text()) + 1;
+        $(".rainbowScore").text(score);
     },
 
 
 
-    addScoreCross: function() {
-        var score = parseInt($(".xScore").text()) + 1;
-        $(".xScore").text(score);
+    addScoreCarebear: function() {
+        var score = parseInt($(".carebearScore").text()) + 1;
+        $(".carebearScore").text(score);
 
     },
 
@@ -231,7 +234,7 @@ var game = {
 
         if (box === '<img src="images/rb7.gif">') {
             $(".whoWon").append("<h2><p>Rainbow Brite you have won!</p></h2>");
-            game.addScoreNought();
+            game.addScoreRainbow();
             game.rainbowWin();
             rainbowSong.load();
              rainbowSong.play();
@@ -240,8 +243,8 @@ var game = {
 
         } else if (box === '<img src="images/carebear.jpg">') {
             $(".whoWon").append("<h2><p>Care Bear you have won!</p></h2>");
-            game.addScoreCross();
-            game.careBearWin();
+            game.addScoreCarebear();
+            game.carebearWin();
             bearSong.load();
             bearSong.play();
             console.log("Player X Care Bear you have won!");
